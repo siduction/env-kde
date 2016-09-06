@@ -2,79 +2,63 @@
 
 include ./VERSION
 THEME= $(NAME)
-CONTROLDIR= 1920x1200
 
 all: prepare Preview background animation
 
 prepare: clean
-	$(RM) -r $(THEME)
+	$(RM) -r ./build
 
-	mkdir -p ./build/$(THEME)/$(CONTROLDIR)
-	mkdir -p ./build/$(THEME)/1600x1200
-	mkdir -p ./build/$(THEME)/1280x1024
-	mkdir -p ./build$(THEME)/1024x768
+	mkdir -p ./build/1920x1200
+	mkdir -p ./build/1600x1200
+	mkdir -p ./build/1280x1024
+	mkdir -p ./build/1024x768
 
-	cp ./theme/Theme.rc ./build/$(THEME)/
-	cp ./theme/description.txt ./build/$(THEME)/$(CONTROLDIR)
+	cp ./theme/Theme.rc ./build/
+	cp ./theme/description.txt ./build/1920x1200
+	cp ./theme/description.txt ./build/1600x1200
+	cp ./theme/description.txt ./build/1280x1024
+	cp ./theme/description.txt ./build/1024x768
 
-#	ln -s  ../$(CONTROLDIR)/description.txt $(THEME)/1600x1200/description.txt
-#	ln -s  ../$(CONTROLDIR)/description.txt $(THEME)/1280x1024/description.txt
-#	ln -s  ../$(CONTROLDIR)/description.txt $(THEME)/1024x768/description.txt
+Preview:
+	inkscape --without-gui --export-width=300 --export-height=225 \
+	    --export-png="./build/$@.png" ./svg/1024x768.svg
+background:
+	inkscape --without-gui --export-width=1024 --export-height=768 \
+	    --export-png="./build/1024x768/$@.png" ./svg/1024x768.svg
+	inkscape --without-gui --export-width=1280 --export-height=1024 \
+	    --export-png="./build/1280x1024/$@.png" ./svg/1280x1024.svg
+	inkscape --without-gui --export-width=1600 --export-height=1200 \
+	    --export-png="./build/1600x1200/$@.png" ./svg/1600x1200.svg
+	inkscape --without-gui \
+	    --export-png="./build/1920x1200/$@.png" ./svg/1920x1200.svg
 
-	# prepare links to svg
-#	ln -sf ../svg/kde-splash-ani-1.svg 1.svg
-#	ln -sf ../svg/kde-splash-ani-2.svg 2.svg
-#	ln -sf ../svg/kde-splash-ani-3.svg 3.svg
-#	ln -sf ../svg/kde-splash-ani-4.svg 4.svg
-#	ln -sf ../svg/background.jpg
-#	ln -sf ../svg/kde-splash-1920x1200.svg 1920x1200.svg
-#	ln -sf ../svg/kde-splash-1600x1200.svg 1600x1200.svg
-#	ln -sf ../svg/kde-splash-1280x1024.svg 1280x1024.svg
-#	ln -sf ../svg/kde-splash-1024x768.svg  1024x768.svg
-
-#Preview:
-#	inkscape --without-gui --export-width=300 --export-height=225 \
-#	    --export-png="$(THEME)/$@.png" 1024x768.svg
-#background:
-#	inkscape --without-gui --export-width=1024 --export-height=768 \
-#	    --export-png="$(THEME)/1024x768/$@.png" 1024x768.svg
-#	inkscape --without-gui --export-width=1280 --export-height=1024 \
-#	    --export-png="$(THEME)/1280x1024/$@.png" 1280x1024.svg
-#	inkscape --without-gui --export-width=1600 --export-height=1200 \
-#	    --export-png="$(THEME)/1600x1200/$@.png" 1600x1200.svg
+animation:
 #	inkscape --without-gui \
-#	    --export-png="$(THEME)/$(CONTROLDIR)/$@.png" 1920x1200.svg
-#animation:
-#	# inkscape --without-gui \
-#	#     --export-png="$(THEME)/$(CONTROLDIR)/0.png" 0.svg
-#	inkscape --without-gui \
-#	    --export-png="$(THEME)/$(CONTROLDIR)/1.png" 1.svg
-#	inkscape --without-gui \
-#	    --export-png="$(THEME)/$(CONTROLDIR)/2.png" 2.svg
-#	inkscape --without-gui \
-#	    --export-png="$(THEME)/$(CONTROLDIR)/3.png" 3.svg
-#	inkscape --without-gui \
-#	    --export-png="$(THEME)/$(CONTROLDIR)/4.png" 4.svg
-#	# inkscape --without-gui \
-#	#    --export-png="$(THEME)/$(CONTROLDIR)/5.png" 5.svg
-#
-#	ln -s  ../$(CONTROLDIR)/1.png $(THEME)/1600x1200/1.png
-#	ln -s  ../$(CONTROLDIR)/1.png $(THEME)/1280x1024/1.png
-#	ln -s  ../$(CONTROLDIR)/1.png $(THEME)/1024x768/1.png
-#
-#	ln -s  ../$(CONTROLDIR)/2.png $(THEME)/1600x1200/2.png
-#	ln -s  ../$(CONTROLDIR)/2.png $(THEME)/1280x1024/2.png
-#	ln -s  ../$(CONTROLDIR)/2.png $(THEME)/1024x768/2.png
-#
-#	ln -s  ../$(CONTROLDIR)/3.png $(THEME)/1600x1200/3.png
-#	ln -s  ../$(CONTROLDIR)/3.png $(THEME)/1280x1024/3.png
-#	ln -s  ../$(CONTROLDIR)/3.png $(THEME)/1024x768/3.png
-#
-#	ln -s  ../$(CONTROLDIR)/4.png $(THEME)/1600x1200/4.png
-#	ln -s  ../$(CONTROLDIR)/4.png $(THEME)/1280x1024/4.png
-#	ln -s  ../$(CONTROLDIR)/4.png $(THEME)/1024x768/4.png
+#	     --export-png="./build/1920x1200/0.png" ./svg/0.svg
+	inkscape --without-gui \
+	    --export-png="./build/1920x1200/1.png" ./svg/1.svg
+	inkscape --without-gui \
+	    --export-png="./build/1920x1200/2.png" ./svg/2.svg
+	inkscape --without-gui \
+	    --export-png="./build/1920x1200/3.png" ./svg/3.svg
+	inkscape --without-gui \
+	    --export-png="./build/1920x1200/4.png" ./svg/4.svg
 
-#clean:
-#	$(RM) -r $(THEME)
-#	$(RM) *.svg
-#	$(RM) background.jpg
+	ln -s ./build/1920x1200/1.png ./build/1600x1200/1.png
+	ln -s ./build/1920x1200/1.png ./build/1280x1024/1.png
+	ln -s ./build/1920x1200/1.png ./build/1024x768/1.png
+
+	ln -s ./build/1920x1200/2.png ./build/1600x1200/2.png
+	ln -s ./build/1920x1200/2.png ./build/1280x1024/2.png
+	ln -s ./build/1920x1200/2.png ./build/1024x768/2.png
+
+	ln -s  ./build/1920x1200/3.png ./build/1600x1200/3.png
+	ln -s  ./build/1920x1200/3.png ./build/1280x1024/3.png
+	ln -s  ./build/1920x1200/3.png ./build/1024x768/3.png
+
+	ln -s  ./build/1920x1200/4.png ./build/1600x1200/4.png
+	ln -s  ./build/1920x1200/4.png ./build/1280x1024/4.png
+	ln -s  ./build/1920x1200/4.png ./build/1024x768/4.png
+
+clean:
+	$(RM) -r ./build
