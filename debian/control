@@ -1,0 +1,35 @@
+Source: paintitblack-kde-artwork
+Section: graphics
+Priority: extra
+Maintainer: Alf Gaida <agaida@siduction.org>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.8
+Vcs-Git: https://git.siduction.org/artwork/env-kde.git
+Vcs-Browser: https://git.siduction.org/artwork/env-kde.git
+
+Package: paintitblack-kde-artwork
+Architecture: all
+Depends:
+ ${misc:Depends},
+ paintitblack-wallpapers,
+ siduction-icons,
+Description: KDE theme for PaintItBlack - next
+ Release specific metapackage depending on ksplash and KDE themes to be
+ used in combination with the K Desktop Environment.
+
+
+
+
+# ksplash package is obsoleted
+
+#Package: paintitblack-ksplash
+#Architecture: all
+#Depends:
+# ${misc:Depends},
+#Description: KDE ksplash theme for PaintItBlack - next
+# Release specific KDE ksplash theme, using the default ksplash engine.
+# .
+# This package does not override existing theme configurations and needs
+# to be selected manually.
+# .
+# As of today this is a empty metapackage.
