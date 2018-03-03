@@ -1,35 +1,17 @@
 Source: patience-kde-artwork
 Section: graphics
-Priority: extra
+Priority: optional
 Maintainer: Alf Gaida <agaida@siduction.org>
-Build-Depends: debhelper (>= 10)
-Standards-Version: 4.1.2
+Build-Depends: debhelper (>= 11)
+Standards-Version: 4.1.3
 Vcs-Git: https://git.siduction.org/artwork/env-kde.git
 Vcs-Browser: https://git.siduction.org/artwork/env-kde.git
 
 Package: patience-kde-artwork
 Architecture: all
-Depends:
- ${misc:Depends},
- patience-wallpapers,
- siduction-icons,
+Depends: ${misc:Depends},
+         patience-wallpapers,
+         siduction-icons
 Description: KDE theme for Patience
  Release specific metapackage depending on ksplash and KDE themes to be
  used in combination with the K Desktop Environment.
-
-
-
-
-# ksplash package is obsoleted
-
-#Package: patience-ksplash
-#Architecture: all
-#Depends:
-# ${misc:Depends},
-#Description: KDE ksplash theme for Patience
-# Release specific KDE ksplash theme, using the default ksplash engine.
-# .
-# This package does not override existing theme configurations and needs
-# to be selected manually.
-# .
-# As of today this is a empty metapackage.
