@@ -1,4 +1,4 @@
-Source: c-blues-kde-artwork
+Source: cblues-kde-artwork
 Section: graphics
 Priority: optional
 Maintainer: Alf Gaida <agaida@siduction.org>
@@ -7,10 +7,10 @@ Standards-Version: 4.1.4
 Vcs-Browser: https://git.siduction.org/artwork/env-kde
 Vcs-Git: https://git.siduction.org/artwork/env-kde.git
 
-Package: c-blues-kde-artwork
+Package: cblues-kde-artwork
 Architecture: all
 Depends: ${misc:Depends},
-         c-blues-wallpapers,
+         cblues-wallpapers,
          siduction-icons
 Description: KDE theme for Patience
  Release specific metapackage depending on ksplash and KDE themes to be
