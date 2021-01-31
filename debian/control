@@ -12,6 +12,6 @@ Architecture: all
 Depends: ${misc:Depends},
          cblues-wallpapers,
          siduction-icons
-Description: KDE theme for Patience
+Description: KDE theme for C-Blues
  Release specific metapackage depending on ksplash and KDE themes to be
  used in combination with the K Desktop Environment.
