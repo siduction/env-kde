@@ -1,4 +1,4 @@
-Source: cblues-kde-artwork
+Source: farewell-kde-artwork
 Section: graphics
 Priority: optional
 Maintainer: Alf Gaida <agaida@siduction.org>
@@ -7,11 +7,11 @@ Standards-Version: 4.1.4
 Vcs-Browser: https://git.siduction.org/artwork/env-kde
 Vcs-Git: https://git.siduction.org/artwork/env-kde.git
 
-Package: cblues-kde-artwork
+Package: farewell-kde-artwork
 Architecture: all
 Depends: ${misc:Depends},
-         cblues-wallpapers,
+         farewell-wallpapers,
          siduction-icons
-Description: KDE theme for C-Blues
+Description: KDE theme for Farewell
  Release specific metapackage depending on ksplash and KDE themes to be
  used in combination with the K Desktop Environment.
