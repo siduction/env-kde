@@ -1,7 +1,7 @@
 #!/bin/bash
 
-CODENAME=C-Blues
-CODENAME_SAFE=cblues
+CODENAME=wintersky
+CODENAME_SAFE=wintersky
 DISPLAY=KDE
 FLAVOUR=kde
-VERSION=2021.1.0
+VERSION=2021.3.0

@@ -1,17 +1,17 @@
-Source: cblues-kde-artwork
+Source: wintersky-kde-artwork
 Section: graphics
 Priority: optional
-Maintainer: Alf Gaida <agaida@siduction.org>
+Maintainer: Torsten Wohlfarth <towo@siduction.org>,
 Build-Depends: debhelper (>= 11)
 Standards-Version: 4.1.4
 Vcs-Browser: https://git.siduction.org/artwork/env-kde
 Vcs-Git: https://git.siduction.org/artwork/env-kde.git
 
-Package: cblues-kde-artwork
+Package: wintersky-kde-artwork
 Architecture: all
 Depends: ${misc:Depends},
-         cblues-wallpapers,
+         wintersky-wallpapers,
          siduction-icons
-Description: KDE theme for C-Blues
+Description: KDE theme for wintersky
  Release specific metapackage depending on ksplash and KDE themes to be
  used in combination with the K Desktop Environment.
