@@ -1,3 +1,9 @@
+wintersky-kde-artwork (2021.2.99-1) unstable; urgency=medium
+
+  * prepare wintersky release
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Sat, 27 Nov 2021 16:49:39 +0100
+
 cblues-kde-artwork (2021.1.0-1) unstable; urgency=medium
 
   * build and upload for release
