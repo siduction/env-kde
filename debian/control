@@ -1,4 +1,4 @@
-Source: wintersky-kde-artwork
+Source: mow-kde-artwork
 Section: graphics
 Priority: optional
 Maintainer: Torsten Wohlfarth <towo@siduction.org>,
@@ -7,10 +7,10 @@ Standards-Version: 4.1.4
 Vcs-Browser: https://git.siduction.org/artwork/env-kde
 Vcs-Git: https://git.siduction.org/artwork/env-kde.git
 
-Package: wintersky-kde-artwork
+Package: mow-kde-artwork
 Architecture: all
 Depends: ${misc:Depends},
-         wintersky-wallpapers,
+         mow-wallpapers,
          siduction-icons
 Description: KDE theme for wintersky
  Release specific metapackage depending on ksplash and KDE themes to be
