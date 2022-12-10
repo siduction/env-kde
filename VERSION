@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CODENAME=Masters_of_War
+CODENAME=Masters of War
 CODENAME_SAFE=MoW
 DISPLAY=KDE
 FLAVOUR=kde
