@@ -12,6 +12,6 @@ Architecture: all
 Depends: ${misc:Depends},
          mow-wallpapers,
          siduction-icons
-Description: KDE theme for wintersky
+Description: KDE theme for Masters Of War
  Release specific metapackage depending on ksplash and KDE themes to be
  used in combination with the K Desktop Environment.
