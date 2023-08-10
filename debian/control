@@ -1,4 +1,4 @@
-Source: mow-kde-artwork
+Source: giants-kde-artwork
 Section: graphics
 Priority: optional
 Maintainer: Torsten Wohlfarth <towo@siduction.org>,
@@ -7,10 +7,10 @@ Standards-Version: 4.1.4
 Vcs-Browser: https://git.siduction.org/artwork/env-kde
 Vcs-Git: https://git.siduction.org/artwork/env-kde.git
 
-Package: mow-kde-artwork
+Package: giants-kde-artwork
 Architecture: all
 Depends: ${misc:Depends},
-         mow-wallpapers,
+         giants-wallpapers,
          siduction-icons
 Description: KDE theme for Masters Of War
  Release specific metapackage depending on ksplash and KDE themes to be

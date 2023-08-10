@@ -1,3 +1,9 @@
+giants-kde-artwork (2023.1.0-1) unstable; urgency=medium
+
+  * prepare 30 years of Debian release
+
+ -- Torsten Wohlfarth <towo@siduction.org>  Thu, 10 Aug 2023 16:08:18 +0200
+
 mow-kde-artwork (2022.1.0-1) unstable; urgency=medium
 
   * Masters of War relaese
