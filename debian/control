@@ -1,4 +1,4 @@
-Source: giants-kde-artwork
+Source: shine_on-kde-artwork
 Section: graphics
 Priority: optional
 Maintainer: Torsten Wohlfarth <towo@siduction.org>,
@@ -7,10 +7,10 @@ Standards-Version: 4.1.4
 Vcs-Browser: https://git.siduction.org/artwork/env-kde
 Vcs-Git: https://git.siduction.org/artwork/env-kde.git
 
-Package: giants-kde-artwork
+Package: shine_on-kde-artwork
 Architecture: all
 Depends: ${misc:Depends},
-         giants-wallpapers,
+         shine_on-wallpapers,
          siduction-icons
 Description: KDE theme for Masters Of War
  Release specific metapackage depending on ksplash and KDE themes to be
