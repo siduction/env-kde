@@ -1,4 +1,4 @@
-Source: shine_on-kde-artwork
+Source: big-crime-kde-artwork
 Section: graphics
 Priority: optional
 Maintainer: Torsten Wohlfarth <towo@siduction.org>,
@@ -7,10 +7,10 @@ Standards-Version: 4.1.4
 Vcs-Browser: https://git.siduction.org/artwork/env-kde
 Vcs-Git: https://git.siduction.org/artwork/env-kde.git
 
-Package: shine_on-kde-artwork
+Package: big-crime-kde-artwork
 Architecture: all
 Depends: ${misc:Depends},
-         shine_on-wallpapers,
+         big-crime-wallpapers,
          siduction-icons
 Description: KDE theme for Masters Of War
  Release specific metapackage depending on ksplash and KDE themes to be
